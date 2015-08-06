@@ -1,4 +1,7 @@
+#include <iostream>
 #include <vector>
+class GraphNode;
+class TreeNode;
 
 class GraphNode{
 public:
@@ -18,7 +21,17 @@ public:
 	}
 };
 using std::vector<TreeNode> Tree;
+using namespace std;
 int main(){
+	TreeNode* parent;
+	TreeNode* root(){
+		TreeNode* pt = this;
+		while((*pt).parent != nullptr){
+			pt = (*pt).parent;
+		}
+		return pt;
+	}
 
+	cout << "hoge" << endl;
 	return 0;
 }
